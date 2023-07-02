@@ -1,0 +1,163 @@
+{
+	//easycom模式使vue组件无需引入即可使用
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/myuser/myuser",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/info/info",
+			"style": {
+				"navigationBarTitleText": "内容",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/classify/classify",
+			"style": {
+				"navigationBarTitleText": "分类"	,
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/classifyessay/classifyessay",
+			"style": {
+				"navigationBarTitleText": "分类文章",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "发现"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "思维帮",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/essay/essay",
+			"style": {
+				"navigationBarTitleText": "我的文章",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/edit/edit",
+			"style": {
+				"navigationBarTitleText": "编辑文章"
+			}
+		},
+		{
+			"path": "pages/browse/browse",
+			"style": {
+				"navigationBarTitleText": "浏览历史",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/collection/collection",
+			"style": {
+				"navigationBarTitleText": "收藏",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/draft/draft",
+			"style": {
+				"navigationBarTitleText": "草稿",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/about/about",
+			"style": {
+				"navigationBarTitleText": "关于程序"
+			}
+		},
+		{
+			"path": "pages/usercenter/usercenter",
+			"style": {
+				"navigationBarTitleText": "用户信息"
+			}
+		}
+    ],
+	//全局外观配置
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "思维帮",
+		"navigationBarBackgroundColor": "#d3fffa",
+		"backgroundColor": "#f8f8f8",
+		"backgroundTextStyle":"dark",
+		"onReachBottomDistance":160
+	},
+	//配置底部导航栏
+	"tabBar": {
+		"color":"#9c9c9c",
+		"selectedColor":"#000000",
+		"backgroundColor":"#f8f8f8",
+		"borderStyle":"white",
+		"list": [
+			{
+				"text" : "首页",
+				"pagePath": "pages/index/index",
+				"iconPath":"static/tabs/home.png",
+				"selectedIconPath":"static/tabs/home_h.png"
+			},
+			{
+				"text" : "分类",
+				"pagePath": "pages/classify/classify",
+				"iconPath":"static/tabs/catelog.png",
+				"selectedIconPath":"static/tabs/catelog_h.png"
+			},
+			{
+				"text" : "发现",
+				"pagePath": "pages/search/search",
+				"iconPath":"static/tabs/res.png",
+				"selectedIconPath":"static/tabs/res_h.png"
+			},
+			{
+				"text" : "我的",
+				"pagePath": "pages/myuser/myuser",
+				"iconPath":"./static/tabs/my.png",
+				"selectedIconPath":"static/tabs/my_h.png"
+			}
+		]
+	},
+	"condition":{
+		"current":0,
+		"list":[
+			{
+				"name":"首页",
+				"path":"pages/index/index"
+			},
+			{
+				"name":"我的",
+				"path":"pages/myuser/myuser"
+			},
+			{
+				"name":"关于程序",
+				"path":"pages/about/about"
+			},
+			{
+				"name":"草稿",
+				"path":"pages/draft/draft",
+				"query":"userId=os2RK4wzEG1krovKq_VRTpjZcsZo"
+			},
+			{
+				"name":"详情",
+				"path":"pages/info/info",
+				"query":"id=48"
+			}
+		]
+	}
+}
